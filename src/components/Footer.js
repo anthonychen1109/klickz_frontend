@@ -11,7 +11,7 @@ class Footer extends Component {
             <a href="mailto:chen.anthony.1109@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
           </div>
           <div class="copyright">
-            <p>&copy; Anthony Chen</p>
+            <p className="signature">&copy; Anthony Chen</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,94 @@
+$padding: 40px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: travel_diary;
+    src: url('../fonts/travel_diary.ttf');
+}
+
+@font-face {
+    font-family: tomatoes;
+    src: url('../fonts/tomatoes.ttf');
+}
+
+@font-face {
+    font-family: bulgatti;
+    src: url('../fonts/Bulgatti.ttf');
+}
+// ################# SPLASH #################
+.splashPage {
+  background-image: url('../images/splash.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  .overlay {
+    background-color: rgba(0,0,0,0.3);
+    height: 60vh;
+    .splashText {
+      padding-top: 40px;
+      text-align: center;
+      h1 {
+        color: white;
+        font-family: travel_diary;
+        text-shadow: 0px 0px 3px black;
+      }
+      .splashButton {
+        font-family: bulgatti;
+      }
+    }
+    .splashLogo h1 {
+      color: white;
+      font-family: travel_diary;
+      left: 50%;
+      position: absolute;
+      text-shadow: 0px 0px 3px black;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// ################# FOOTER #################
+.footer {
+  // background-image: url('../images/footer.jpg');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  // height: 40vh;
+  .overlay {
+    // background-color: rgba(0,0,0,0.3);
+    height: 40vh;
+    .social-media {
+      display: flex;
+      justify-content: center;
+      top: 50%;
+      position: relative;
+      .fa-linkedin, .fa-facebook-f, .fa-github, .fa-envelope {
+        color: white;
+        margin: 0 10px;
+      }
+    }
+    .copyright {
+      top: 50%;
+      left: 50%;
+      position: relative;
+      transform: translate(-50%, 0);
+      p {
+        color: white;
+        padding-top: $padding;
+        text-align: center;
+      }
+      .signature {
+        font-family: tomatoes;
+      }
+    }
+  }
+}
