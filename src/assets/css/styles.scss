@@ -19,6 +19,14 @@ $padding: 40px;
     font-family: bulgatti;
     src: url('../fonts/Bulgatti.ttf');
 }
+// ################# NAVBAR #################
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    p {
+      color: white;
+    }
+  }
 // ################# SPLASH #################
 .splashPage {
   background-image: url('../images/splash.gif');

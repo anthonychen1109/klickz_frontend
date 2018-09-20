@@ -11,6 +11,12 @@
 @font-face {
   font-family: bulgatti;
   src: url("../fonts/Bulgatti.ttf"); }
+.navbar {
+  display: flex;
+  flex-direction: column; }
+  .navbar p {
+    color: white; }
+
 .splashPage {
   background-image: url("../images/splash.gif");
   background-position: center;
