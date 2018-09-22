@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './assets/css/styles.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
-import reducers from './reducers';
+import { createStore, applyMiddleware } from 'redux'
+import reducer from './reducers';
+import 'semantic-ui-css/semantic.min.css';
+import thunk from 'redux-thunk';
 
 import App from './App';
 
-const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducer, applyMiddleware(thunk))
 
 const routes = (
   <Provider store={store}>

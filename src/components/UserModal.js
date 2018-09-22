@@ -1,16 +1,53 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Button, Dimmer, Header, Icon } from 'semantic-ui-react'
+import HandleUserForm from './HandleUserForm';
 
-class UserModal extends Component {
-  state = {
+export default class UserModal extends Component {
+  state = {}
 
+  handleOpen = () => {
+    this.setState({ active: true })
+  }
+
+  handleClose = () => {
+    this.setState({ active: false })
+  }
+
+  handleRegister = () => {
+    this.props.register()
+    this.handleOpen()
+  }
+
+  handleLogin = () => {
+    this.props.login()
+    this.handleOpen()
   }
 
   render() {
+    const { active } = this.state
     return (
       <div>
+        <Button
+          className="registerLoginBtn"
+          color="black"
+          onClick={this.handleRegister}>
+          Register
+        </Button>
+        <Button
+          className="registerLoginBtn"
+          onClick={this.handleLogin}
+          color='black'>
+          Login
+        </Button>
+        <Dimmer active={active} onClickOutside={this.handleClose} page>
+          <Header as='h2' icon inverted>
+            <HandleUserForm
+              handleOpen={this.handleOpen} handleClose={this.handleClose}
+              registered={this.props.registered}
+              />
+          </Header>
+        </Dimmer>
       </div>
     )
   }
 }
-
-export default UserModal;

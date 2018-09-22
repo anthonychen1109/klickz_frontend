@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import UserModal from './UserModal';
+import HandleUserForm from './HandleUserForm';
 
 class Splash extends Component {
+  state = {
+    registered: false
+  }
+
+  register = () => {
+    this.setState({
+      registered: false
+    })
+  }
+
+  login = () => {
+    this.setState({
+      registered: true
+    })
+  }
+
   render() {
     return (
       <div className="splashPage">
         <div className="overlay">
           <div className="splashText">
-            <h1>A personalized travel planner</h1>
-            <button to='/home' className="splashButton btn btn-primary animated bounceInDown">Start your Journey</button>
+
           </div>
           <div className="splashLogo">
-            <h1>Klicks</h1>
+            <div>
+              <h1>Your Personalized Meetup Planner</h1>
+            </div>
+            <div className="splashModalBtns">
+              <UserModal
+                registered={this.state.registered}
+                register={this.register}
+                login={this.login}
+                />
+            </div>
           </div>
           <Footer />
         </div>

@@ -49,14 +49,20 @@ $padding: 40px;
         font-family: bulgatti;
       }
     }
-    .splashLogo h1 {
+    .splashLogo {
       color: white;
+      display: flex;
+      flex-direction: column;
       font-family: travel_diary;
       left: 50%;
       position: absolute;
       text-shadow: 0px 0px 3px black;
       top: 50%;
       transform: translate(-50%, -50%);
+      .splashModalBtns {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
@@ -99,4 +105,19 @@ $padding: 40px;
       }
     }
   }
+}
+
+// ################# MODAL #################
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formInputs {
+  color: white;
+  text-shadow: 0px 0px 3px black;
+}
+
+.registerLoginBtn {
+  border: 1px solid white !important;
 }
